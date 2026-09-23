@@ -1,0 +1,183 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+}
+
+/* Header & Navigation */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #d1c9d8;
+  border-bottom: 0.8px solid #118f41;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #1b40bbaf;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #8b7cf6;
+  transition: width 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #8b7cf6;
+}
+
+.site-nav a:hover::after,
+.site-nav a.active::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  padding: 5rem 5%;
+  background: linear-gradient(
+      90deg,
+      rgba(20, 23, 28, 0.75),
+      rgba(20, 23, 28, 0.4),
+      rgba(20, 23, 28, 0.1)
+    ),
+    url("ba1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section h1 {
+  margin: 0;
+  font-size: 2.2em;
+  color: #fff;
+}
+
+/* Content Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  color: #004080;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #004080;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Leadership Cards */
+.leadership {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.leader {
+  flex: 1;
+  min-width: 200px;
+  background: #f0f4f8;
+  padding: 15px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.leader img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  min-height: 120px;
+  padding: 30px 50px;
+  background-color: #004080;
+  color: #fff;
+  font-size: 16px;
+  display: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 10px;
+  }
+
+  .hero-section {
+    padding: 3rem 2rem;
+    min-height: 300px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
